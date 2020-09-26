@@ -1,12 +1,13 @@
 CC=g++
 CFLAGS= -std=c++17 -Wall -w -g
+USERLIBS= first-libraries-test/libcomplex.a
 OFLAGS= -g -c
 OBJS=main.o complex.o
 EXE=output
 
 
 $(EXE): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(EXE)
+	$(CC) $(CFLAGS) $(OBJS) -o $(EXE) $(USERLIBS) -lm
 
 
 main.o: main.cc

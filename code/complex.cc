@@ -107,7 +107,7 @@ Complex & Complex::operator= (const Complex & z){
 }
 
 namespace complexFunction{
-  const Complex I (0, 1);
+  const Complex I (0.0, 1.0);
   //double (*cmath_exp)(double x) = &exp ;
   double abs(const Complex & z){
     return z.real() * z.real() + z.imag() * z.imag();
